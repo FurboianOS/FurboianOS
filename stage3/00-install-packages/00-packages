@@ -15,5 +15,7 @@ libcamera-tools
 libcamera-apps
 python3-pyqt5
 python3-opengl
+dunst
 xfce4-notifyd gnome gnome-core gnome-shell xorg
 #gnome-software
+plank
