@@ -1,6 +1,6 @@
-# pi-gen
+# HHOS
 
-Tool used to create Raspberry Pi OS images. (Previously known as Raspbian).
+Tool used to create HHS-OS images. (based on pi-gen).
 
 
 ## Dependencies
@@ -27,7 +27,7 @@ Getting started is as simple as cloning this repository on your build machine. Y
 can do so with:
 
 ```bash
-git clone https://github.com/RPI-Distro/pi-gen.git
+git clone https://github.com/HooverHigh/hhos.git
 ```
 
 `--depth 1` can be added afer `git clone` to create a shallow clone, only containing
@@ -374,17 +374,13 @@ maintenance and allows for more easy customization.
    here's where you start trimming.
 
  - **Stage 3** - desktop system.  Here's where you get the full desktop system
-   with X11 and LXDE, web browsers, git for development, Raspbian custom UI
+   with X11 and GNOME, web browsers, git for development, Raspbian custom UI
    enhancements, etc.  This is a base desktop system, with some development
    tools installed.
 
  - **Stage 4** - Normal Raspbian image. System meant to fit on a 4GB card. This is the
    stage that installs most things that make Raspbian friendly to new
    users like system documentation.
-
- - **Stage 5** - The Raspbian Full image. More development
-   tools, an email client, learning tools like Scratch, specialized packages
-   like sonic-pi, office productivity, etc.
 
 ### Stage specification
 
