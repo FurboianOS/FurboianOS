@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-nm=dhcp
+nm="dhcp"
 
 function nm_dhcp {
   install -v -d "${ROOTFS_DIR}/etc/wpa_supplicant"
