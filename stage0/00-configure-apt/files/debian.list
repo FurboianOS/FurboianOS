@@ -1,0 +1,2 @@
+#Offical debian repo:
+deb http://deb.debian.org/debian/ RELEASE main contrib non-free
