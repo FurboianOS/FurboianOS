@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+remove_games="y"
+
 on_chroot << EOF
 update-alternatives --install /usr/bin/x-www-browser \
   x-www-browser /usr/bin/chromium-browser 86
@@ -9,4 +11,8 @@ update-alternatives --install /usr/bin/gnome-www-browser \
   touch /etc/polkit-1/localauthority.conf.d/51-admin.conf
   sh -c 'echo "[Configuration]" >> /etc/polkit-1/localauthority.conf.d/51-admin.conf'
   sh -c 'echo "AdminIdentities=unix-group:sudo;unix-group:admin" >> /etc/polkit-1/localauthority.conf.d/51-admin.conf'
+  echo "/usr/sbin/gdm3" > /etc/X11/default-display-manager
+  if [ "$remove_games" == "y" ]; then
+    apt remove aisleriot five-or-more four-in-a-row gnome-2048 gnome-chess gnome-games gnome-klotski gnome-mahjongg gnome-mines gnome-nibbles gnome-remote-desktop gnome-robots gnome-sudoku gnome-taquin gnome-tetravex hitori hoichess iagno lightsoff quadrapassel swell-foop tali
+  fi
 EOF
