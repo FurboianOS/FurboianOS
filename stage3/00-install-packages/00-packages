@@ -17,3 +17,5 @@ python3-opengl
 gnome gnome-core gnome-software gnome-shell
 plank
 default-jdk openjdk-8-jdk
+vlc
+gparted
