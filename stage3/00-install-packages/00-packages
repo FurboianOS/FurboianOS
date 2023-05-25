@@ -17,5 +17,7 @@ python3-opengl
 gnome gnome-core gnome-software gnome-shell
 plank
 default-jdk openjdk-8-jdk
+ffmpeg
 vlc
 gparted
+raspberrypi-net-mods raspberrypi-ui-mods
