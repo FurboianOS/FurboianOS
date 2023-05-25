@@ -1,7 +1,6 @@
 gstreamer1.0-x gstreamer1.0-omx gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-alsa gstreamer1.0-libav
 qpdfview gtk2-engines alsa-utils
 desktop-base
-git
 policykit-1
 gvfs
 rfkill
@@ -15,7 +14,5 @@ libcamera-tools
 libcamera-apps
 python3-pyqt5
 python3-opengl
-dunst
-xfce4-notifyd gnome gnome-core gnome-shell xorg
-#gnome-software
+gnome gnome-core gnome-shell xorg
 plank
