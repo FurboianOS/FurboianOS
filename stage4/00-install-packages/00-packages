@@ -3,7 +3,7 @@ python3-tk thonny
 python3-pgzero
 python3-serial
 python3-picamera
-debian-reference-en dillo
+debian-reference-en
 raspberrypi-net-mods raspberrypi-ui-mods
 python3-pip
 python3-numpy
@@ -19,8 +19,6 @@ python3-twython
 python3-smbus
 python3-flask
 pprompt
-piwiz
-rp-prefapps
 ffmpeg
 vlc
 rpi-imager
