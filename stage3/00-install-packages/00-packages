@@ -14,10 +14,8 @@ libcamera-tools
 libcamera-apps
 python3-pyqt5
 python3-opengl
-gnome gnome-core gnome-software gnome-shell
-plank
-default-jdk openjdk-8-jdk
+gnome-core gnome-shell gnome-session gnome-control-center gnome-terminal nautilus gnome-settings-daemon gnome-themes-extra gnome-tweaks
 ffmpeg
 vlc
 gparted
-raspberrypi-net-mods raspberrypi-ui-mods
+raspberrypi-net-mods

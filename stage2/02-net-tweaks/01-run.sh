@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-nm="dhcp"
+nm="nm"
 
 function nm_dhcp {
   install -v -d "${ROOTFS_DIR}/etc/wpa_supplicant"
@@ -44,7 +44,7 @@ EOL
 
 if [ "$nm" == "dhcp" ]; then
   nm_dhcp
-elif [ "$nm" = "nm" ]; then
+elif [ "$nm" == "nm" ]; then
   on_chroot << EOF
     SUDO_USER="${FIRST_USER_NAME}" raspi-config nonint do_boot_wait 0
     SUDO_USER="${FIRST_USER_NAME}" raspi-config nonint do_netconf 2
