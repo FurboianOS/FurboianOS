@@ -11,6 +11,6 @@ RUN apt-get -y update && \
         binfmt-support ca-certificates qemu-utils kpartx fdisk gpg pigz\
     && rm -rf /var/lib/apt/lists/*
 
-COPY . /pi-gen/
+COPY . /FurboianOS/
 
-VOLUME [ "/pi-gen/work", "/pi-gen/deploy"]
+VOLUME [ "/FurboianOS/work", "/FurboianOS/deploy"]
