@@ -89,7 +89,7 @@ case "$(uname -m)" in
     BASE_IMAGE=debian:bullseye
     ;;
 esac
-${DOCKER} build --build-arg BASE_IMAGE=${BASE_IMAGE} -t FurboianOS "${DIR}"
+${DOCKER} build --build-arg BASE_IMAGE=${BASE_IMAGE} -t furboianos "${DIR}"
 
 if [ "${CONTAINER_EXISTS}" != "" ]; then
   DOCKER_CMDLINE_NAME="${CONTAINER_NAME}_cont"
@@ -155,19 +155,19 @@ time ${DOCKER} run \
   --volume "${CONFIG_FILE}":/config:ro \
   -e "GIT_HASH=${GIT_HASH}" \
   "${DOCKER_CMDLINE_POST[@]}" \
-  FurboianOS \
+  furboianos \
   bash -e -o pipefail -c "
     dpkg-reconfigure qemu-user-static &&
     # binfmt_misc is sometimes not mounted with debian bullseye image
     (mount binfmt_misc -t binfmt_misc /proc/sys/fs/binfmt_misc || true) &&
-    cd /FurboianOS; ./build.sh ${BUILD_OPTS} &&
+    cd /furboianos; ./build.sh ${BUILD_OPTS} &&
     rsync -av work/*/build.log deploy/
   " &
   wait "$!"
 
 # Ensure that deploy/ is always owned by calling user
 echo "copying results from deploy/"
-${DOCKER} cp "${CONTAINER_NAME}":/FurboianOS/deploy - | tar -xf -
+${DOCKER} cp "${CONTAINER_NAME}":/furboianos/deploy - | tar -xf -
 
 echo "copying log from container ${CONTAINER_NAME} to depoy/"
 ${DOCKER} logs --timestamps "${CONTAINER_NAME}" &>deploy/build-docker.log

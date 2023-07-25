@@ -11,6 +11,6 @@ RUN apt-get -y update && \
         binfmt-support ca-certificates qemu-utils kpartx fdisk gpg pigz\
     && rm -rf /var/lib/apt/lists/*
 
-COPY . /FurboianOS/
+COPY . /furboianos/
 
-VOLUME [ "/FurboianOS/work", "/FurboianOS/deploy"]
+VOLUME [ "/furboianos/work", "/furboianos/deploy"]
