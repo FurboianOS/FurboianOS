@@ -13,6 +13,6 @@ update-alternatives --install /usr/bin/gnome-www-browser \
   gnome-www-browser /usr/bin/chromium-browser 86
   apt-mark auto python3-pyqt5 python3-opengl
   if [ "$remove_games" == "y" ]; then
-    apt remove -y aisleriot five-or-more four-in-a-row gnome-2048 gnome-chess gnome-games gnome-klotski gnome-mahjongg gnome-mines gnome-nibbles gnome-remote-desktop gnome-robots gnome-sudoku gnome-taquin gnome-tetravex hitori hoichess iagno lightsoff quadrapassel swell-foop tali
+    apt remove -y aisleriot five-or-more four-in-a-row gnome-2048 gnome-chess gnome-games gnome-klotski gnome-mahjongg gnome-mines gnome-nibbles gnome-robots gnome-sudoku gnome-taquin gnome-tetravex hitori hoichess iagno lightsoff quadrapassel swell-foop tali
   fi
 EOF

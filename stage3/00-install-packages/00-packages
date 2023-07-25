@@ -14,7 +14,7 @@ libcamera-tools
 libcamera-apps
 python3-pyqt5
 python3-opengl
-gnome-shell gnome-control-center gnome-terminal nautilus gnome-settings-daemon gnome-themes-extra gnome-tweaks
+gnome-shell gnome-control-center gnome-terminal nautilus gnome-settings-daemon gnome-tweaks gnome-control-center xdg-user-dirs gdm
 ffmpeg
 vlc
 gparted
